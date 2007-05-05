@@ -2,7 +2,7 @@
 
 Summary:	Net::Write - an interface to open and send raw frames to network
 Name:		perl-%{module}
-Version:	0.82
+Version:	1.00
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -46,6 +46,7 @@ export CFLAGS="%{optflags}"
 
 %make
 
+%check
 make test
 
 %install
@@ -60,10 +61,7 @@ rm -rf %{buildroot}
 %files 
 %defattr(-,root,root)
 %doc Changes LICENSE LICENSE.Artistic README
-%dir %{perl_vendorarch}/auto/Net/Write
-%{perl_vendorarch}/auto/Net/Write/Write.so
-%dir %{perl_vendorarch}/Net/Write
-%{perl_vendorarch}/Net/Write/Layer*.pm
-%{perl_vendorarch}/Net/Write.pm
+%{perl_vendorarch}/*
+%{perl_vendorlib}/*
 %{_mandir}/*/*
 

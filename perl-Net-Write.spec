@@ -13,6 +13,7 @@ BuildRequires:	perl(Class::Gomor)
 BuildRequires:	perl(Socket6)
 BuildRequires:	perl(Net::Pcap) => 0.12
 BuildRequires:	perl(ExtUtils::ParseXS)
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Net::Write provides a portable interface to open a network interface, and be

@@ -3,7 +3,7 @@
 Summary:	Net::Write - an interface to open and send raw frames to network
 Name:		perl-%{module}
 Version:	1.00
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}

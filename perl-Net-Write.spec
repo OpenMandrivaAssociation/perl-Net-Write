@@ -1,19 +1,19 @@
 %define	module	Net-Write
 
-Summary:	Net::Write - an interface to open and send raw frames to network
+Summary:	An interface to open and send raw frames to network
 Name:		perl-%{module}
-Version:	1.00
-Release:	%mkrel 2
+Version:	1.01
+Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{module}-%{version}.tar.gz
 BuildRequires:	perl(Class::Gomor)
 BuildRequires:	perl(Socket6)
 BuildRequires:	perl(Net::Pcap) => 0.12
 BuildRequires:	perl(ExtUtils::ParseXS)
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::Write provides a portable interface to open a network interface, and be
@@ -33,35 +33,27 @@ See also Net::Write::Layer2, Net::Write::Layer3, Net::Write::Layer4 for
 specific information on opening network interfaces at these layers.
 
 %prep
-
 %setup -q -n %{module}-%{version} 
 
 # perl path hack
 find . -type f | xargs %{__perl} -p -i -e "s|^#!/usr/local/bin/perl|#!%{_bindir}/perl|g"
 
 %build
-export CFLAGS="%{optflags}" 
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor </dev/null
-
-%make
+%make CFLAGS="%{optflags}"
 
 %check
 make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
-
 rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
 %doc Changes LICENSE LICENSE.Artistic README
-%{perl_vendorarch}/*
-%{perl_vendorlib}/*
+%{perl_vendorlib}/Net
 %{_mandir}/*/*
-

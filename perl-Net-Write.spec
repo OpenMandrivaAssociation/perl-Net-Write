@@ -2,7 +2,7 @@
 
 Summary:	An interface to open and send raw frames to network
 Name:		perl-%{module}
-Version:	1.01
+Version:	1.02
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl

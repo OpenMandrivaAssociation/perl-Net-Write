@@ -2,8 +2,8 @@
 
 Summary:	An interface to open and send raw frames to network
 Name:		perl-%{module}
-Version:	1.03
-Release:	%mkrel 2
+Version:	1.04
+Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}

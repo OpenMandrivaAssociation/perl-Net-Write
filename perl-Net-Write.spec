@@ -1,15 +1,15 @@
 %define	upstream_name	 Net-Write
-%define	upstream_version 1.05
+%define upstream_version 1.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.07
+Release:	1
 
 Summary:	An interface to open and send raw frames to network
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Net/Net-Write-1.07.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Gomor)
@@ -98,4 +98,5 @@ make test
 
 * Sat Jul 29 2006 Oden Eriksson <oeriksson@mandriva.com> 0.82-1mdv2007.0
 - initial Mandriva package
+
 

@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.07
-Release:	2
+Release:	3
 
 Summary:	An interface to open and send raw frames to network
 License:	GPL+ or Artistic

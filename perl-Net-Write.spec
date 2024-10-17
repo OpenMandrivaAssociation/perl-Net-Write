@@ -8,7 +8,7 @@ Release:	3
 Summary:	An interface to open and send raw frames to network
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Net/Net-Write-1.07.tar.gz
 
 BuildRequires:	perl-devel

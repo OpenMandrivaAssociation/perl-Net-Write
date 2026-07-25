@@ -1,15 +1,15 @@
 %define	upstream_name	 Net-Write
-%define upstream_version 1.07
+%define upstream_version 1.10
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.07
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	An interface to open and send raw frames to network
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Net/Net-Write-1.07.tar.gz
+Url:		https://metacpan.org/dist/Net-Write
+Source0:	https://cpan.metacpan.org/authors/id/G/GO/GOMOR/Net-Write-1.10.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

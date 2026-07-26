@@ -1,9 +1,7 @@
 %define	upstream_name	 Net-Write
-%define upstream_version 1.10
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.10
+Release:	2
 
 Summary:	An interface to open and send raw frames to network
 License:	GPL+ or Artistic
@@ -37,7 +35,7 @@ See also Net::Write::Layer2, Net::Write::Layer3, Net::Write::Layer4 for
 specific information on opening network interfaces at these layers.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 # perl path hack
 find . -type f | xargs %{__perl} -p -i -e "s|^#!/usr/local/bin/perl|#!%{_bindir}/perl|g"
@@ -60,9 +58,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-1mdv2010.0
 + Revision: 404272
-- rebuild using %%perl_convert_version
-
-* Thu Jun 11 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.05-1mdv2010.0
+- rebuild using %1.10 Thu Jun 11 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.05-1mdv2010.0
 + Revision: 385254
 - update to new version 1.05
 
